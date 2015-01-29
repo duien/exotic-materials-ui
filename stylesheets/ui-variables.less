@@ -1,8 +1,15 @@
+@import "syntax-variables";
+
 // Outlander Colors
-@gray: #4e4e4e;
-@dark-gray: #2d2d2d;
-@very-dark-gray: #222;
-@black: #191919;
+// @gray: #4e4e4e;
+// @dark-gray: #2d2d2d;
+// @very-dark-gray: #222;
+// @black: #191919;
+
+@gray: @syntax-background-color;
+@dark-gray: darken(@syntax-background-color, 5%);
+@very-dark-gray: darken(@syntax-background-color, 10%);
+@black: darken(@syntax-background-color, 20%);
 
 @cyan: #66cccc;
 @blue: #6699cc;
@@ -14,9 +21,12 @@
 
 // UI Colors
 
-@text-color: #bebebe;
-@text-color-subtle: #6e6e6e;
-@text-color-highlight: #fff;
+// @text-color: #bebebe;
+@text-color: @syntax-text-color;
+// @text-color-subtle: #6e6e6e;
+@text-color-subtle: darken(@syntax-text-color, 10%);
+// @text-color-highlight: #fff;
+@text-color-highlight: lighten(@syntax-text-color, 10%);
 @text-color-selected: @text-color-highlight;
 
 @text-color-info: @blue;
@@ -62,7 +72,8 @@
 @overlay-background-color: @dark-gray;
 @overlay-border-color: @background-color-highlight;
 
-@button-background-color: #232323;
+// @button-background-color: #232323;
+@button-background-color: lighten(@syntax-background-color, 25%);
 @button-background-color-hover: lighten(@button-background-color, 5%);
 @button-background-color-selected: #141414;
 @button-border-color: @base-border-color;
